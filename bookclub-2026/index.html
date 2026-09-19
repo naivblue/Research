@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="2026 독서모임 회차별 사진·기록과 남은 일정">
+<title>2026 독서모임 앨범</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  --bg:#EEF0EB; --panel:#FFFFFF; --sunk:#E3E6DF;
+  --ink:#1C221F; --ink2:#586059; --ink3:#8A928B;
+  --line:#D7DBD3; --accent:#2F5D50; --accent-bg:#DFEAE5;
+  --c1:#6B4A2E; --c1b:#F1E6D6;   /* 트럼프·비트코인: 갈색·금 */
+  --c2:#5C6AA8; --c2b:#E3E7F4;   /* AI: 연보라 */
+  --c3:#D9531E; --c3b:#FBE5DA;   /* 시체: 주황 */
+  --c4:#3E8578; --c4b:#DDEEE9;   /* 불행: 민트 */
+  --c5:#8A928B; --c5b:#E8EAE5;
+  --serif:"Gowun Batang","Noto Serif KR",Georgia,serif;
+  --sans:"Noto Sans KR",-apple-system,"Apple SD Gothic Neo",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141816; --panel:#1C211E; --sunk:#242A26;
+  --ink:#E8ECE7; --ink2:#A7AFA8; --ink3:#727A73;
+  --line:#2C332E; --accent:#7FB8A6; --accent-bg:#1F332D;
+  --c1:#D6B07C; --c1b:#2B231B; --c2:#9FAAE0; --c2b:#20243A;
+  --c3:#F0855A; --c3b:#36231B; --c4:#7FC4B3; --c4b:#1C2F2A; --c5:#8A928B; --c5b:#232826;
+}}
+:root[data-theme="dark"]{
+  --bg:#141816; --panel:#1C211E; --sunk:#242A26;
+  --ink:#E8ECE7; --ink2:#A7AFA8; --ink3:#727A73;
+  --line:#2C332E; --accent:#7FB8A6; --accent-bg:#1F332D;
+  --c1:#D6B07C; --c1b:#2B231B; --c2:#9FAAE0; --c2b:#20243A;
+  --c3:#F0855A; --c3b:#36231B; --c4:#7FC4B3; --c4b:#1C2F2A; --c5:#8A928B; --c5b:#232826;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.7;font-size:15px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:900px;margin:0 auto;padding-block:40px 80px;padding-inline:18px}
+
+header{display:grid;gap:14px;margin-bottom:36px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--ink3);margin:0}
+h1{font-family:var(--serif);font-size:clamp(28px,5vw,40px);font-weight:700;letter-spacing:-.01em;line-height:1.25;margin:0;text-wrap:balance}
+.lead{margin:0;color:var(--ink2);max-width:60ch}
+.members{display:flex;flex-wrap:wrap;gap:8px;margin:2px 0 0}
+.members span{font-size:13px;padding:4px 11px;border-radius:99px;background:var(--panel);border:1px solid var(--line)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.stats div{background:var(--panel);padding:14px 16px}
+.stats .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--ink3);text-transform:uppercase;margin:0 0 3px}
+.stats .v{font-family:var(--serif);font-size:24px;font-weight:700;margin:0;line-height:1.1}
+.stats .v small{font-family:var(--sans);font-size:12px;font-weight:400;color:var(--ink3);margin-left:3px}
+
+/* timeline */
+.tl{display:grid;gap:22px;position:relative}
+.mt{display:grid;grid-template-columns:96px 1fr;gap:18px;align-items:start}
+.when{position:sticky;top:12px;font-family:var(--mono);font-size:12px;color:var(--ink2);line-height:1.5;padding-top:14px}
+.when b{display:block;font-size:20px;font-weight:600;color:var(--ink);letter-spacing:-.02em}
+.when .no{color:var(--ink3);font-size:11px;letter-spacing:.08em}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;border-top:4px solid var(--c)}
+.card .body{padding:18px 20px 20px;display:grid;gap:10px}
+.card h2{font-family:var(--serif);font-size:21px;font-weight:700;margin:0;line-height:1.35;text-wrap:balance}
+.card h2 small{display:block;font-family:var(--sans);font-size:13px;font-weight:400;color:var(--ink2);margin-top:2px}
+.meta{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:12px;padding:2px 9px;border-radius:5px;background:var(--cb);color:var(--c);font-weight:500}
+.chip.plain{background:var(--sunk);color:var(--ink2)}
+.photos{display:grid;gap:2px;background:var(--line)}
+.photos.two{grid-template-columns:1fr 1fr}
+.photos button{all:unset;display:block;cursor:zoom-in;background:var(--sunk);aspect-ratio:4/3;overflow:hidden}
+.photos.two button{aspect-ratio:1/1}
+.photos img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+.photos button:hover img{transform:scale(1.03)}
+.photos button:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+.cap{font-size:12.5px;color:var(--ink3);margin:0}
+.nophoto{margin:0;padding:22px 20px;border:1.5px dashed var(--line);border-radius:8px;color:var(--ink3);font-size:13px;text-align:center;background:var(--sunk)}
+details{border-top:1px solid var(--line);padding-top:10px;margin-top:4px}
+summary{cursor:pointer;font-size:13.5px;font-weight:500;color:var(--accent);list-style:none;display:flex;gap:6px;align-items:center}
+summary::before{content:"+";font-family:var(--mono);width:16px;height:16px;border-radius:4px;background:var(--accent-bg);display:inline-grid;place-items:center;font-size:12px}
+details[open] summary::before{content:"–"}
+.qa{display:grid;gap:12px;margin:12px 0 0;padding:0;list-style:none}
+.qa li{display:grid;gap:3px;font-size:14px}
+.qa .q{font-weight:700}
+.qa .q::before{content:attr(data-n);font-family:var(--mono);font-size:11px;color:var(--ink3);margin-right:8px}
+.qa .a{color:var(--ink2);padding-left:14px;border-left:2px solid var(--line)}
+
+/* upcoming */
+h3{font-family:var(--serif);font-size:19px;margin:44px 0 12px}
+.up{display:grid;gap:8px}
+.up div{display:grid;grid-template-columns:96px 1fr;gap:18px;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--line)}
+.up .d{font-family:var(--mono);font-size:12px;color:var(--ink2)}
+.up .d.tbd{color:var(--ink3)}
+.votes{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:13.5px}
+th,td{padding:8px 13px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--ink3);background:var(--sunk);text-transform:uppercase;font-weight:600}
+td.n{font-family:var(--mono);text-align:center}
+tbody tr:last-child td{border-bottom:none}
+td .done{font-size:11px;color:var(--accent);background:var(--accent-bg);padding:1px 6px;border-radius:4px;margin-left:6px}
+
+dialog{border:none;padding:0;background:transparent;max-width:min(96vw,1100px);max-height:96vh}
+dialog::backdrop{background:rgba(10,14,12,.86)}
+dialog img{max-width:min(96vw,1100px);max-height:90vh;display:block;border-radius:6px}
+dialog p{margin:8px 0 0;color:#DDE3DE;font-size:13px;text-align:center}
+dialog button{position:absolute;top:-2px;right:0;all:unset;color:#fff;font-size:26px;cursor:pointer;padding:6px 12px}
+
+footer{margin-top:40px;padding-top:14px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink3)}
+footer a{color:var(--accent)}
+@media (max-width:560px){
+  .mt,.up div{grid-template-columns:1fr;gap:8px}
+  .when{position:static;padding-top:0;display:flex;gap:10px;align-items:baseline}
+  .when b{font-size:16px}
+  .photos.two{grid-template-columns:1fr}
+  .photos.two button{aspect-ratio:4/3}
+}
+@media (prefers-reduced-motion:reduce){.photos img{transition:none}}
+</style>
+
+<div class="wrap">
+<header>
+  <p class="eyebrow">BOOK CLUB · 2026 · 넷이서</p>
+  <h1>2026 독서모임 앨범</h1>
+  <p class="lead">구글 시트에 흩어져 있던 회차별 사진과 기록을 한자리에 모았습니다. 두 달에 한 번, 책 한 권.</p>
+  <div class="members"><span>박은주</span><span>박경순</span><span>이윤미</span><span>김지혜</span></div>
+  <div class="stats">
+    <div><p class="k">진행한 모임</p><p class="v">5<small>회</small></p></div>
+    <div><p class="k">사진이 남은 회차</p><p class="v">4<small>/ 5</small></p></div>
+    <div><p class="k">사진</p><p class="v">5<small>장</small></p></div>
+    <div><p class="k">다음 모임</p><p class="v">10월<small>셋째 주 토</small></p></div>
+  </div>
+</header>
+
+<section class="tl">
+
+  <article class="mt" style="--c:var(--c1);--cb:var(--c1b)">
+    <div class="when"><span class="no">01회차</span><b>1.09</b>금 · 22:00</div>
+    <div class="card">
+      <div class="photos two">
+        <button type="button" data-src="img/p1_btc_a.jpg" data-cap="ZOOM 네 화면과 책 표지"><img src="img/p1_btc_a.jpg" alt="줌 화면에 네 명이 각자 방에서 접속해 있고 옆에 트럼프 시대의 지정학과 비트코인 표지가 떠 있다"></button>
+        <button type="button" data-src="img/p1_btc_b.jpg" data-cap="단체방에 올린 인증샷 · 오후 10:05"><img src="img/p1_btc_b.jpg" alt="줌 4분할 화면에서 네 명이 책을 들어 보이는 캡처 두 장"></button>
+      </div>
+      <div class="body">
+        <h2>트럼프 시대의 지정학과 비트코인<small>오태민 · 거인의 정원</small></h2>
+        <div class="meta"><span class="chip">온라인 · ZOOM</span><span class="chip plain">2026.01.09</span><span class="chip plain">사진 2장</span></div>
+        <p class="cap">첫 모임. 화면 캡처와 단체방 인증샷이 남아 있습니다. 질문 카드 5개로 진행했고 답도 시트에 적혀 있습니다.</p>
+        <details>
+          <summary>질문 카드와 그날의 답</summary>
+          <ul class="qa">
+            <li><span class="q" data-n="Q1">비트코인을 자산으로 본다 vs 질서의 대안으로 본다?</span><span class="a">둘 다!!</span></li>
+            <li><span class="q" data-n="Q2">달러 패권은 앞으로 더 강해질까, 서서히 흔들릴까?</span><span class="a">아직 모르겠음. 스테이블코인이 달러 강화와 같은 의미인가? 1년 뒤 다시 이야기해보자.</span></li>
+            <li><span class="q" data-n="Q3">금 · 달러 · 비트코인 중 하나만 고르라면?</span><span class="a">은주·윤미는 비트코인, 지혜·경순은 금.</span></li>
+            <li><span class="q" data-n="Q4">비트코인은 혁명에 가까울까, 보험에 가까울까?</span><span class="a">기술적으로는 혁명이라 시대의 흐름으로 봄. 보험이라는 말은 아직 크게 와닿지 않음(윤미·지혜).</span></li>
+            <li><span class="q" data-n="Q5">이 책을 읽고 내 자산·일·선택에서 바꿀 게 있다면?</span><span class="a">모든 게 바뀌고 있으니 2026년은 넷이 함께 학습에 도전하자. 추천책: 마법의 연금 굴리기, 박곰희 투자법.</span></li>
+          </ul>
+        </details>
+      </div>
+    </div>
+  </article>
+
+  <article class="mt" style="--c:var(--c2);--cb:var(--c2b)">
+    <div class="when"><span class="no">02회차</span><b>2.06</b>금</div>
+    <div class="card">
+      <div class="photos">
+        <button type="button" data-src="img/p2_ai.jpg" data-cap="저녁 식탁 위 도서관 책 세 권"><img src="img/p2_ai.jpg" alt="찌개가 놓인 저녁 식탁 위로 AI는 세상을 어떻게 바꾸는가 도서관 대출본 세 권을 들어 보이는 손"></button>
+      </div>
+      <div class="body">
+        <h2>AI는 세상을 어떻게 바꾸는가<small>장동선 · 김영사</small></h2>
+        <div class="meta"><span class="chip">오프라인</span><span class="chip plain">2026.02.06</span><span class="chip plain">사진 1장</span></div>
+        <p class="cap">첫 오프라인 모임. 세 권 모두 도서관 대출본이라 바코드 라벨이 나란히 찍혔습니다. 장소는 시트에 기록이 없습니다.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="mt" style="--c:var(--c3);--cb:var(--c3b)">
+    <div class="when"><span class="no">03회차</span><b>4.19</b>일</div>
+    <div class="card">
+      <div class="photos">
+        <button type="button" data-src="img/p3_siche.jpg" data-cap="뚝섬 한강공원 · 피크닉 테이블"><img src="img/p3_siche.jpg" alt="한강과 건물을 배경으로 피크닉 테이블 앞에서 나는 매주 시체를 보러 간다 세 권을 들어 보이는 손"></button>
+      </div>
+      <div class="body">
+        <h2>나는 매주 시체를 보러 간다<small>유성호 · 21세기북스</small></h2>
+        <div class="meta"><span class="chip">오프라인 · 자양역, 뚝섬 한강공원</span><span class="chip plain">2026.04.19</span><span class="chip plain">사진 1장</span></div>
+        <p class="cap">한강 피크닉 모임. 시트에 날짜와 장소가 함께 적힌 유일한 회차입니다. 포도와 방울토마토도 같이 찍혔습니다.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="mt" style="--c:var(--c4);--cb:var(--c4b)">
+    <div class="when"><span class="no">04회차</span><b>6월</b>셋째 주 토</div>
+    <div class="card">
+      <div class="photos">
+        <button type="button" data-src="img/p4_bulhaeng.jpg" data-cap="네 권과 부라타 샐러드"><img src="img/p4_bulhaeng.jpg" alt="나무 식탁 위 부라타 샐러드 접시를 둘러 우리의 불행은 당연하지 않습니다 네 권이 놓여 있다"></button>
+      </div>
+      <div class="body">
+        <h2>우리의 불행은 당연하지 않습니다<small>김누리 · 해냄</small></h2>
+        <div class="meta"><span class="chip">오프라인</span><span class="chip plain">2026.06 셋째 주 토</span><span class="chip plain">사진 1장</span></div>
+        <p class="cap">네 명 다 책을 가져온 회차. 시트에는 정확한 날짜와 장소가 없어서 운영 가이드의 일정(6월 셋째 주 토요일)만 남아 있습니다.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="mt" style="--c:var(--c5);--cb:var(--c5b)">
+    <div class="when"><span class="no">05회차</span><b>8월</b>셋째 주 토</div>
+    <div class="card">
+      <div class="body">
+        <h2>저속노화 마인드셋<small>정희원</small></h2>
+        <div class="meta"><span class="chip plain">오프라인</span><span class="chip plain">2026.08 셋째 주 토</span></div>
+        <p class="nophoto">이 회차는 시트에 사진도, 별도 탭도 없습니다. 단체방에 사진이 있으면 시트에 탭을 하나 추가해 두면 앨범이 완성됩니다.</p>
+      </div>
+    </div>
+  </article>
+
+</section>
+
+<h3>남은 일정</h3>
+<div class="up">
+  <div><span class="d">10월 셋째 주 토</span><span>06 · 한나 아렌트와 차 한잔 <span class="chip plain">오프라인</span></span></div>
+  <div><span class="d tbd">미정</span><span>07 · 생존을 위한 최소한의 지리</span></div>
+  <div><span class="d tbd">미정</span><span>08 · 더 플로</span></div>
+  <div><span class="d tbd">미정</span><span>09 · 부의 심리학</span></div>
+</div>
+
+<h3>처음 고른 후보 16권</h3>
+<p class="cap" style="margin:-6px 0 12px">시트 첫 탭에서 넷이 각자 읽고 싶은 책에 표를 던진 결과입니다. 4표 두 권이 1·2회차가 됐습니다.</p>
+<div class="votes"><table>
+  <thead><tr><th>책</th><th style="text-align:center">은주</th><th style="text-align:center">경순</th><th style="text-align:center">윤미</th><th style="text-align:center">지혜</th><th style="text-align:center">합</th></tr></thead>
+  <tbody>
+    <tr><td>트럼프 시대의 지정학과 비트코인<span class="done">1회</span></td><td class="n">●</td><td class="n">●</td><td class="n">●</td><td class="n">●</td><td class="n">4</td></tr>
+    <tr><td>AI는 세상을 어떻게 바꾸는가<span class="done">2회</span></td><td class="n">●</td><td class="n">●</td><td class="n">●</td><td class="n">●</td><td class="n">4</td></tr>
+    <tr><td>한나 아렌트와 차 한잔</td><td class="n">●</td><td class="n">●</td><td class="n"></td><td class="n">●</td><td class="n">3</td></tr>
+    <tr><td>나는 매주 시체를 보러 간다<span class="done">3회</span></td><td class="n">●</td><td class="n">●</td><td class="n"></td><td class="n">●</td><td class="n">3</td></tr>
+    <tr><td>부의 심리학</td><td class="n">●</td><td class="n">●</td><td class="n"></td><td class="n">●</td><td class="n">3</td></tr>
+    <tr><td>우리의 불행은 당연하지 않습니다<span class="done">4회</span></td><td class="n">●</td><td class="n">●</td><td class="n"></td><td class="n">●</td><td class="n">3</td></tr>
+    <tr><td>저속노화 마인드셋<span class="done">5회</span></td><td class="n">●</td><td class="n">●</td><td class="n">●</td><td class="n"></td><td class="n">3</td></tr>
+    <tr><td>생존을 위한 최소한의 지리</td><td class="n">●</td><td class="n">●</td><td class="n"></td><td class="n">●</td><td class="n">3</td></tr>
+    <tr><td>더 플로</td><td class="n">●</td><td class="n">●</td><td class="n"></td><td class="n">●</td><td class="n">3</td></tr>
+    <tr><td>정의란 무엇인가</td><td class="n"></td><td class="n">●</td><td class="n"></td><td class="n">●</td><td class="n">2</td></tr>
+    <tr><td>카메라의 땅</td><td class="n"></td><td class="n">●</td><td class="n"></td><td class="n">●</td><td class="n">2</td></tr>
+    <tr><td>노희영의 브랜딩 법칙</td><td class="n">●</td><td class="n"></td><td class="n"></td><td class="n">●</td><td class="n">2</td></tr>
+    <tr><td>나는 메트로폴리탄 미술관의 경비원입니다</td><td class="n"></td><td class="n">●</td><td class="n">●</td><td class="n"></td><td class="n">2</td></tr>
+    <tr><td>이진우의 다시 만난 경제</td><td class="n">●</td><td class="n"></td><td class="n">●</td><td class="n"></td><td class="n">2</td></tr>
+    <tr><td>패권의 비밀</td><td class="n">●</td><td class="n"></td><td class="n"></td><td class="n">●</td><td class="n">2</td></tr>
+    <tr><td>음악으로 세상을 바꾸는 CEO 금난새</td><td class="n"></td><td class="n"></td><td class="n">●</td><td class="n"></td><td class="n">1</td></tr>
+  </tbody>
+</table></div>
+
+<footer>출처: 구글 시트 「step1.도서목록 고르기」「step2.운영 가이드」와 회차별 탭. 사진은 시트 각 탭에 삽입된 원본을 그대로 옮겼습니다. 사진을 누르면 크게 볼 수 있습니다.</footer>
+</div>
+
+<dialog id="lb"><button type="button" id="lbClose" aria-label="닫기">×</button><img id="lbImg" src="" alt=""><p id="lbCap"></p></dialog>
+<script>
+const lb=document.getElementById('lb'), lbImg=document.getElementById('lbImg'), lbCap=document.getElementById('lbCap');
+document.querySelectorAll('.photos button').forEach(b=>b.addEventListener('click',()=>{
+  lbImg.src=b.dataset.src; lbImg.alt=b.querySelector('img').alt; lbCap.textContent=b.dataset.cap||''; lb.showModal();
+}));
+document.getElementById('lbClose').onclick=()=>lb.close();
+lb.addEventListener('click',e=>{ if(e.target===lb) lb.close(); });
+</script>
+</body></html>
