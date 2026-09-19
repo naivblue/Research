@@ -12,10 +12,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap">
 <style>
 :root{
-  --bg:#FFF7F2; --panel:#FFFFFF; --sunk:#FBEFEA;
-  --g1:rgba(255,190,160,.55); --g2:rgba(196,180,255,.5); --g3:rgba(160,230,205,.55); --g4:rgba(255,226,140,.45);
+  --bg:#EEF0EB; --panel:#FFFFFF; --sunk:#E3E6DF;
   --ink:#1C221F; --ink2:#586059; --ink3:#8A928B;
-  --line:#EBDDD6; --accent:#2F5D50; --accent-bg:#DFEAE5;
+  --line:#D7DBD3; --accent:#2F5D50; --accent-bg:#DFEAE5;
   --c1:#6B4A2E; --c1b:#F1E6D6;   /* 트럼프·비트코인: 갈색·금 */
   --c2:#5C6AA8; --c2b:#E3E7F4;   /* AI: 연보라 */
   --c3:#D9531E; --c3b:#FBE5DA;   /* 시체: 주황 */
@@ -26,29 +25,21 @@
   --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#171519; --panel:#1F1D22; --sunk:#29262D;
-  --g1:rgba(255,140,110,.16); --g2:rgba(150,130,255,.18); --g3:rgba(90,200,170,.14); --g4:rgba(255,210,110,.12);
+  --bg:#141816; --panel:#1C211E; --sunk:#242A26;
   --ink:#E8ECE7; --ink2:#A7AFA8; --ink3:#727A73;
   --line:#2C332E; --accent:#7FB8A6; --accent-bg:#1F332D;
   --c1:#D6B07C; --c1b:#2B231B; --c2:#9FAAE0; --c2b:#20243A;
   --c3:#F0855A; --c3b:#36231B; --c4:#7FC4B3; --c4b:#1C2F2A; --c5:#8A928B; --c5b:#232826;
 }}
 :root[data-theme="dark"]{
-  --bg:#171519; --panel:#1F1D22; --sunk:#29262D;
-  --g1:rgba(255,140,110,.16); --g2:rgba(150,130,255,.18); --g3:rgba(90,200,170,.14); --g4:rgba(255,210,110,.12);
+  --bg:#141816; --panel:#1C211E; --sunk:#242A26;
   --ink:#E8ECE7; --ink2:#A7AFA8; --ink3:#727A73;
   --line:#2C332E; --accent:#7FB8A6; --accent-bg:#1F332D;
   --c1:#D6B07C; --c1b:#2B231B; --c2:#9FAAE0; --c2b:#20243A;
   --c3:#F0855A; --c3b:#36231B; --c4:#7FC4B3; --c4b:#1C2F2A; --c5:#8A928B; --c5b:#232826;
 }
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.7;font-size:15px;-webkit-font-smoothing:antialiased;
-  background-image:
-    radial-gradient(60% 45% at 8% 0%, var(--g1), transparent 70%),
-    radial-gradient(55% 40% at 95% 12%, var(--g2), transparent 70%),
-    radial-gradient(50% 40% at 15% 70%, var(--g3), transparent 70%),
-    radial-gradient(55% 40% at 90% 90%, var(--g4), transparent 70%);
-  background-attachment:fixed;background-repeat:no-repeat;min-height:100vh}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.7;font-size:15px;-webkit-font-smoothing:antialiased}
 .wrap{max-width:900px;margin:0 auto;padding-block:40px 80px;padding-inline:18px}
 
 header{display:grid;gap:14px;margin-bottom:36px}
@@ -69,7 +60,7 @@ h1{font-family:var(--serif);font-size:clamp(28px,5vw,40px);font-weight:700;lette
 .when{position:sticky;top:12px;font-family:var(--mono);font-size:12px;color:var(--ink2);line-height:1.5;padding-top:14px}
 .when b{display:block;font-size:20px;font-weight:600;color:var(--ink);letter-spacing:-.02em}
 .when .no{color:var(--ink3);font-size:11px;letter-spacing:.08em}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;border-top:4px solid var(--c);box-shadow:0 10px 30px -18px rgba(90,60,70,.25)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;border-top:4px solid var(--c)}
 .card .body{padding:18px 20px 20px;display:grid;gap:10px}
 .card h2{font-family:var(--serif);font-size:21px;font-weight:700;margin:0;line-height:1.35;text-wrap:balance}
 .card h2 small{display:block;font-family:var(--sans);font-size:13px;font-weight:400;color:var(--ink2);margin-top:2px}
